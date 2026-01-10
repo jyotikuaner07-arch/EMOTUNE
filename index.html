@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMOTUNE - Emotion-Based Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Mood Check-In Popup -->
+    <div id="moodCheckInPopup" class="popup-overlay hidden">
+        <div class="popup-content">
+            <h3>How are you feeling now?</h3>
+            <p>Did your mood change? Let's adjust your music!</p>
+            <div class="mood-grid-small" id="checkInMoodGrid"></div>
+            <button onclick="closeMoodCheckIn()" class="secondary-btn">Keep Current Mood</button>
+        </div>
+    </div>
+
+    <!-- Mood History Sidebar -->
+    <div id="historysidebar" class="history-sidebar hidden">
+        <div class="history-header">
+            <h3>Mood History</h3>
+            <button onclick="closeHistory()" class="close-btn">&times;</button>
+        </div>
+        <div id="historyList" class="history-list"></div>
+    </div>
+
+    <!-- Mood Selection Screen -->
+    <div id="moodSelector" class="mood-selector-overlay">
+        <div class="mood-selector-content">
+            <div class="title-section">
+                <h1>EMOTUNE</h1>
+                <p>How are you feeling today?</p>
+            </div>
+            <div class="mood-grid" id="moodGrid"></div>
+        </div>
+    </div>
+
+    <!-- Main Player Interface -->
+    <div id="playerInterface" class="player-interface hidden">
+        <div class="container">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="top-bar-left">
+                    <button onclick="showMoodSelector()" class="top-btn">Change Mood</button>
+                    <button onclick="toggleHistory()" class="top-btn icon-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 3v18h18"/>
+                            <path d="M18 17V9"/>
+                            <path d="M13 17V5"/>
+                            <path d="M8 17v-3"/>
+                        </svg>
+                    </button>
+                    <button onclick="toggleDarkMode()" class="top-btn icon-btn">
+                        <svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mood-indicator" id="moodIndicator"></div>
+            </div>
+
+            <!-- Album Art -->
+            <div class="album-art">
+                <div class="album-art-inner" id="albumArt">
+                    <div class="emoji-display" id="emojiDisplay"></div>
+                </div>
+                <div class="album-progress" id="albumProgress">
+                    <div class="album-progress-bar" id="albumProgressBar"></div>
+                </div>
+            </div>
+
+            <!-- Now Playing Info -->
+            <div class="now-playing" id="nowPlaying">
+                <h2 id="songTitle">Select a mood to start</h2>
+                <p id="songArtist"></p>
+                <p id="songMeta" class="song-meta"></p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-section">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="time-display">
+                    <span id="currentTime">0:00</span>
+                    <span id="totalTime">0:00</span>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button onclick="prevSong()" class="control-btn">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="19 20 9 12 19 4 19 20"/>
+                        <line x1="5" y1="19" x2="5" y2="5"/>
+                    </svg>
+                </button>
+                
+                <button onclick="togglePlay()" class="control-btn play-btn" id="playBtn">
+                    <svg id="playIcon" width="40" height="40" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
+                </button>
+                
+                <button onclick="nextSong()" class="control-btn">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5 4 15 12 5 20 5 4"/>
+                        <line x1="19" y1="5" x2="19" y2="19"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Volume Control -->
+            <div class="volume-control">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                </svg>
+                <input type="range" id="volumeSlider" min="0" max="100" value="70" class="volume-slider">
+                <span id="volumeDisplay">70%</span>
+            </div>
+
+            <!-- Playlist -->
+            <div class="playlist" id="playlist">
+                <h3 class="playlist-title" id="playlistTitle">Select a mood to see playlist</h3>
+                <div class="playlist-items" id="playlistItems"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

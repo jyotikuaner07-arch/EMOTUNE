@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMOTUNE - Let the music understand you</title>
+    <link rel="stylesheet" href="landing-style.css">
+</head>
+<body>
+    <!-- Full Screen Mood Menu -->
+    <div class="mood-overlay" id="moodOverlay">
+        <button class="close-btn" onclick="closeMenu()">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        
+        <div class="mood-menu-container">
+            <h2 class="mood-menu-title">Choose Your Mood</h2>
+            
+            <div class="mood-grid">
+                <div class="mood-card happy" onclick="selectMood('happy')">
+                    <div class="mood-emoji">😊</div>
+                    <div class="mood-details">
+                        <h3>Happy</h3>
+                        <p>Pop / Upbeat • Fast Tempo</p>
+                    </div>
+                </div>
+
+                <div class="mood-card sad" onclick="selectMood('sad')">
+                    <div class="mood-emoji">😔</div>
+                    <div class="mood-details">
+                        <h3>Sad</h3>
+                        <p>Acoustic / Lo-fi • Slow Tempo</p>
+                    </div>
+                </div>
+
+                <div class="mood-card relaxed" onclick="selectMood('relaxed')">
+                    <div class="mood-emoji">😌</div>
+                    <div class="mood-details">
+                        <h3>Relaxed</h3>
+                        <p>Ambient / Chill • Medium-Slow</p>
+                    </div>
+                </div>
+
+                <div class="mood-card energetic" onclick="selectMood('energetic')">
+                    <div class="mood-emoji">⚡</div>
+                    <div class="mood-details">
+                        <h3>Energetic</h3>
+                        <p>EDM / Dance • Very Fast</p>
+                    </div>
+                </div>
+
+                <div class="mood-card romantic" onclick="selectMood('romantic')">
+                    <div class="mood-emoji">❤️</div>
+                    <div class="mood-details">
+                        <h3>Romantic</h3>
+                        <p>R&B / Soul • Medium Tempo</p>
+                    </div>
+                </div>
+
+                <div class="mood-card focused" onclick="selectMood('focused')">
+                    <div class="mood-emoji">🎯</div>
+                    <div class="mood-details">
+                        <h3>Focused</h3>
+                        <p>Instrumental / Study • Medium</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Background Container -->
+    <div class="video-container">
+        <!-- Replace 'your-video.mp4' with your video file path -->
+        <video autoplay muted loop playsinline id="bgVideo">
+            <source src="Pinterest_710.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Dark overlay for better text readability -->
+        <div class="video-overlay"></div>
+
+        <!-- Content -->
+        <div class="content">
+            <h1 class="title">How are you feeling right now?</h1>
+            <p class="subtitle">Let the music understand you.</p>
+
+            <!-- Play Button -->
+            <button class="play-button" onclick="openMenu()">
+                <div class="play-icon"></div>
+            </button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+    </div>
+
+    <script src="landing-script.js"></script>
+</body>
+</html>
