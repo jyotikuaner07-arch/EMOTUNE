@@ -73,27 +73,44 @@
 
     <!-- Video Background Container -->
     <div class="video-container">
-        <!-- Replace 'your-video.mp4' with your video file path -->
         <video autoplay muted loop playsinline id="bgVideo">
             <source src="ui/images/Pinterest_710.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         
-        <!-- Dark overlay for better text readability -->
         <div class="video-overlay"></div>
 
-        <!-- Content -->
         <div class="content">
             <h1 class="title">How are you feeling right now?</h1>
             <p class="subtitle">Let the music understand you.</p>
 
-            <!-- Play Button -->
+            <!-- Text Input -->
+            <div class="input-container">
+                <div class="mood-input-wrapper">
+                    <input 
+                        type="text" 
+                        class="mood-input" 
+                        id="moodInput"
+                        placeholder="Type your mood or emoji... (e.g., happy, 😊, energetic)"
+                        autocomplete="off"
+                    />
+                    <span class="input-icon">🎵</span>
+                </div>
+                <div class="suggestions">
+                    <span class="suggestion-chip" onclick="fillInput('happy 😊')">happy 😊</span>
+                    <span class="suggestion-chip" onclick="fillInput('sad 😔')">sad 😔</span>
+                    <span class="suggestion-chip" onclick="fillInput('energetic ⚡')">energetic ⚡</span>
+                    <span class="suggestion-chip" onclick="fillInput('relaxed 😌')">relaxed 😌</span>
+                </div>
+            </div>
+
+            <div class="divider">or browse moods</div>
+
             <button class="play-button" onclick="openMenu()">
                 <div class="play-icon"></div>
             </button>
         </div>
 
-        <!-- Progress Bar -->
         <div class="progress-bar">
             <div class="progress-fill" id="progressFill"></div>
         </div>

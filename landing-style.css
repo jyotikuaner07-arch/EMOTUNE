@@ -31,7 +31,6 @@ body {
     overflow: hidden;
 }
 
-/* Video Background */
 #bgVideo {
     position: absolute;
     top: 50%;
@@ -45,7 +44,6 @@ body {
     z-index: 1;
 }
 
-/* Video Overlay */
 .video-overlay {
     position: absolute;
     top: 0;
@@ -69,9 +67,8 @@ body {
 }
 
 .title {
-    font-family: "MonotypeCorsiva";
+    font-family: "Poppins", sans-serif;
     font-size: 64px;
-    font-family: "MonotypeCorsiva", cursive;
     font-weight: 400;
     letter-spacing: 1px;
     color: rgba(255, 255, 255, 0.95);
@@ -85,15 +82,104 @@ body {
     font-size: 28px;
     color: rgba(255, 255, 255, 0.9);
     text-align: center;
-    font-family: "Poppins", sans-serif;
+    font-family: "MonotypeCorsiva", cursive;
     font-weight: 300;
     letter-spacing: 0.5px;
-    font-style: normal;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
     animation: fadeInUp 1s ease-out 0.2s both;
 }
 
+/* Input Container */
+.input-container {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.mood-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.mood-input {
+    width: 100%;
+    padding: 20px 60px 20px 24px;
+    font-size: 18px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+.mood-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.mood-input:focus {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.input-icon {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    pointer-events: none;
+}
+
+.suggestions {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.suggestion-chip {
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.suggestion-chip:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 30px 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Animations */
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -140,7 +226,7 @@ body {
     justify-content: center;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    animation: fadeInUp 1s ease-out 0.4s both;
+    animation: fadeInUp 1s ease-out 0.5s both;
 }
 
 .play-button:hover {
@@ -326,6 +412,16 @@ body {
         font-size: 20px;
     }
 
+    .mood-input {
+        font-size: 16px;
+        padding: 16px 50px 16px 20px;
+    }
+
+    .input-icon {
+        font-size: 20px;
+        right: 20px;
+    }
+
     .play-button {
         width: 100px;
         height: 100px;
@@ -377,6 +473,5 @@ body {
 
     .subtitle {
         letter-spacing: 0.3px;
-}
-
+    }
 }
