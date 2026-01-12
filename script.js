@@ -1,4 +1,4 @@
-// Emotion Data
+// Emotion Data with Local MP3 Files
 const EMOTIONS = {
     happy: {
         name: 'Happy',
@@ -8,10 +8,13 @@ const EMOTIONS = {
         genre: 'Pop / Upbeat',
         tempo: 'Fast',
         songs: [
-            { title: 'Good Vibes', artist: 'Summer Rays', duration: 234, tempo: 128 },
-            { title: 'Sunshine Dance', artist: 'Happy Hearts', duration: 198, tempo: 132 },
-            { title: 'Joy Ride', artist: 'The Optimists', duration: 211, tempo: 125 },
-            { title: 'Smile More', artist: 'Bright Side', duration: 187, tempo: 130 }
+            { title: 'Cruel Summer', artist: 'Taylor Swift', duration: 178, tempo: 170, file: 'ui/music/happy/Cruel Summer.mp3' },
+            { title: 'Danza Kuduro', artist: 'Don Omar, Lucenzo', duration: 199, tempo: 130, file: 'ui/music/happy/Danza Kuduro.mp3' },
+            { title: 'Espresso', artist: 'Sabrina Carpenter', duration: 175, tempo: 104, file: 'ui/music/happy/Espresso.mp3' },
+            { title: 'Sapphire', artist: 'Ed Sheeran', duration: 203, tempo: 110, file: 'ui/music/happy/Sapphire.mp3' },
+            { title: 'Summer of Love', artist: 'Shawn Mendes, Tainy', duration: 203, tempo: 116, file: 'ui/music/happy/Summer of Love.mp3' },
+
+
         ]
     },
     sad: {
@@ -22,10 +25,11 @@ const EMOTIONS = {
         genre: 'Acoustic / Lo-fi',
         tempo: 'Slow',
         songs: [
-            { title: 'Rainy Thoughts', artist: 'Melancholy Moon', duration: 267, tempo: 65 },
-            { title: 'Empty Room', artist: 'Solitude', duration: 243, tempo: 58 },
-            { title: 'Fading Memory', artist: 'Echo Chamber', duration: 289, tempo: 62 },
-            { title: 'Blue Hour', artist: 'Midnight Poetry', duration: 256, tempo: 60 }
+            { title: 'Anuv Jain', artist: 'Anuv Jain', duration: 225, tempo: 70, file: 'ui/music/sad/Anuv Jain.mp3' },
+            { title: 'Finding Her', artist: 'Kushagra', duration: 214, tempo: 74, file: 'ui/music/sad/Finding Her.mp3' },
+            { title: 'Nafrat', artist: 'Seedhe Maut', duration: 196, tempo: 82, file: 'ui/music/sad/Nafrat.mp3' },
+            { title: "We Don't Talk Anymore", artist: 'Charlie Puth ft. Selena Gomez', duration: 217, tempo: 100, file: "ui/music/sad/We Don't Talk Anymore.mp3" },
+
         ]
     },
     relaxed: {
@@ -36,10 +40,8 @@ const EMOTIONS = {
         genre: 'Ambient / Chill',
         tempo: 'Medium-Slow',
         songs: [
-            { title: 'Ocean Breeze', artist: 'Calm Collective', duration: 312, tempo: 75 },
-            { title: 'Garden Dreams', artist: 'Nature Sounds', duration: 298, tempo: 72 },
-            { title: 'Peaceful Mind', artist: 'Zen Masters', duration: 334, tempo: 68 },
-            { title: 'Soft Clouds', artist: 'Sky Meditation', duration: 287, tempo: 70 }
+            { title: 'Ocean Breeze', artist: 'Calm Collective', duration: 312, tempo: 75, file: 'music/relaxed/song1.mp3' },
+            { title: 'Garden Dreams', artist: 'Nature Sounds', duration: 298, tempo: 72, file: 'music/relaxed/song2.mp3' },
         ]
     },
     energetic: {
@@ -50,10 +52,12 @@ const EMOTIONS = {
         genre: 'EDM / Dance',
         tempo: 'Very Fast',
         songs: [
-            { title: 'Power Up', artist: 'Electric Storm', duration: 201, tempo: 140 },
-            { title: 'Adrenaline Rush', artist: 'High Voltage', duration: 189, tempo: 145 },
-            { title: 'Peak Performance', artist: 'Gym Beasts', duration: 215, tempo: 138 },
-            { title: 'Unstoppable', artist: 'Force Field', duration: 198, tempo: 142 }
+            { title: 'Believer', artist: 'Imagine Dragons', duration: 204, tempo: 125, file: 'ui/music/energetic/Believer.mp3'},
+            { title: 'Desi Girl', artist: 'Shankar–Ehsaan–Loy', duration: 305, tempo: 128, file: 'ui/music/energetic/Desi Girl.mp3' },
+            { title: 'Kar Gayi Chull', artist: 'Badshah, Fazilpuria', duration: 187, tempo: 130, file: 'ui/music/energetic/Kar Gayi Chull.mp3' },
+            { title: 'MONTERO (Call Me By Your Name)', artist: 'Lil Nas X', duration: 137, tempo: 179, file: 'ui/music/energetic/MONTERO (Call Me By Your Name).mp3' },
+            { title: 'Tu Meri', artist: 'Vishal–Shekhar', duration: 260, tempo: 125, file: 'ui/music/energetic/Tu Meri (Bang Bang) - (Raag.Fm).mp3' },
+
         ]
     },
     romantic: {
@@ -64,10 +68,12 @@ const EMOTIONS = {
         genre: 'R&B / Soul',
         tempo: 'Medium',
         songs: [
-            { title: 'Moonlit Kiss', artist: 'Love Letters', duration: 245, tempo: 88 },
-            { title: 'Hearts Align', artist: 'Soul Mates', duration: 267, tempo: 85 },
-            { title: 'Forever Yours', artist: 'Romantic Era', duration: 289, tempo: 82 },
-            { title: 'Sweet Embrace', artist: 'Velvet Voice', duration: 234, tempo: 90 }
+            { title: 'Bargad', artist: 'Anuv Jain', duration: 210, tempo: 76, file: 'ui/music/romantic/Bargad.mp3' },
+            { title: 'Questions', artist: 'Chris Brown', duration: 258, tempo: 86, file: 'ui/music/romantic/Chris Brown Questions.mp3' },
+            { title: 'Closer', artist: 'The Chainsmokers ft. Halsey', duration: 244, tempo: 95, file: 'ui/music/romantic/Closer The Chainsmokers.mp3' },
+            { title: 'Love Me Like You Do', artist: 'Ellie Goulding', duration: 252, tempo: 95, file: 'ui/music/romantic/Love me like you do.mp3' },
+            { title: 'Tum Ho Toh', artist: 'Saiyaara', duration: 242, tempo: 72, file: 'ui/music/romantic/Tum Ho Toh Saiyaara 320 Kbps.mp3' },
+
         ]
     },
     focused: {
@@ -78,30 +84,67 @@ const EMOTIONS = {
         genre: 'Instrumental / Study',
         tempo: 'Medium',
         songs: [
-            { title: 'Deep Work', artist: 'Productivity Lab', duration: 298, tempo: 95 },
-            { title: 'Flow State', artist: 'Focus Music', duration: 312, tempo: 92 },
-            { title: 'Brain Power', artist: 'Study Beats', duration: 287, tempo: 98 },
-            { title: 'Concentration', artist: 'Mind Palace', duration: 301, tempo: 90 }
+            { title: 'Deep Work', artist: 'Productivity Lab', duration: 298, tempo: 95, file: 'music/focused/song1.mp3' },
+            { title: 'Flow State', artist: 'Focus Music', duration: 312, tempo: 92, file: 'music/focused/song2.mp3' },
         ]
     }
 };
+
 
 // State
 let currentEmotion = null;
 let currentSongIndex = 0;
 let isPlaying = false;
-let progress = 0;
-let volume = 70;
 let isDarkMode = false;
 let moodHistory = [];
-let progressInterval = null;
+
+// Audio Element
+const audioPlayer = document.getElementById('audioPlayer');
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     loadFromStorage();
     renderMoodSelector();
+    setupAudioListeners();
     updateVolumeSlider();
+    
+    // Check if mood was passed from landing page
+    const urlParams = new URLSearchParams(window.location.search);
+    const moodFromUrl = urlParams.get('mood');
+    if (moodFromUrl && EMOTIONS[moodFromUrl]) {
+        selectEmotion(moodFromUrl);
+    }
 });
+
+// Setup Audio Event Listeners
+function setupAudioListeners() {
+    // Update progress bar as song plays
+    audioPlayer.addEventListener('timeupdate', () => {
+        if (audioPlayer.duration) {
+            const percentage = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+            document.getElementById('progressFill').style.width = `${percentage}%`;
+            document.getElementById('albumProgressBar').style.width = `${percentage}%`;
+            document.getElementById('currentTime').textContent = formatTime(Math.floor(audioPlayer.currentTime));
+        }
+    });
+    
+    // When song loads, update duration
+    audioPlayer.addEventListener('loadedmetadata', () => {
+        document.getElementById('totalTime').textContent = formatTime(Math.floor(audioPlayer.duration));
+    });
+    
+    // When song ends, play next
+    audioPlayer.addEventListener('ended', () => {
+        nextSong();
+        showMoodCheckIn();
+    });
+    
+    // Error handling
+    audioPlayer.addEventListener('error', (e) => {
+        console.error('Audio error:', e);
+        alert('Could not load audio file. Please check if the file exists in the music folder.');
+    });
+}
 
 // Load from localStorage
 function loadFromStorage() {
@@ -180,7 +223,7 @@ function renderMoodSelector() {
 function selectEmotion(emotionKey, addToHistory = true) {
     currentEmotion = emotionKey;
     currentSongIndex = 0;
-    progress = 0;
+    isPlaying = false;
     
     if (addToHistory) {
         moodHistory.unshift({
@@ -200,10 +243,22 @@ function selectEmotion(emotionKey, addToHistory = true) {
     }
     
     updateUI();
+    loadCurrentSong();
     hideMoodSelector();
     showPlayerInterface();
     
     saveToStorage();
+}
+
+// Load Current Song
+function loadCurrentSong() {
+    if (!currentEmotion) return;
+    
+    const emotion = EMOTIONS[currentEmotion];
+    const song = emotion.songs[currentSongIndex];
+    
+    audioPlayer.src = song.file;
+    audioPlayer.load();
 }
 
 // Update UI
@@ -241,14 +296,91 @@ function updateUI() {
     document.getElementById('songArtist').textContent = song.artist;
     document.getElementById('songMeta').textContent = `${emotion.genre} • ${song.tempo} BPM • ${emotion.tempo} Tempo`;
     
-    // Update total time
-    document.getElementById('totalTime').textContent = formatTime(song.duration);
-    
     // Update controls colors
     updateControlColors(emotion.color);
     
     // Update playlist
     renderPlaylist();
+}
+
+// Toggle Play/Pause
+function togglePlay() {
+    if (!currentEmotion) return;
+    
+    if (isPlaying) {
+        audioPlayer.pause();
+        isPlaying = false;
+    } else {
+        audioPlayer.play();
+        isPlaying = true;
+    }
+    
+    // Update play icon
+    const playIcon = document.getElementById('playIcon');
+    const emojiDisplay = document.getElementById('emojiDisplay');
+    
+    if (isPlaying) {
+        playIcon.innerHTML = '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
+        emojiDisplay.classList.add('playing');
+    } else {
+        playIcon.innerHTML = '<polygon points="5 3 19 12 5 21 5 3"/>';
+        emojiDisplay.classList.remove('playing');
+    }
+}
+
+// Next Song
+function nextSong() {
+    if (!currentEmotion) return;
+    
+    const emotion = EMOTIONS[currentEmotion];
+    currentSongIndex = (currentSongIndex + 1) % emotion.songs.length;
+    
+    loadCurrentSong();
+    updateUI();
+    
+    if (isPlaying) {
+        audioPlayer.play();
+    }
+}
+
+// Previous Song
+function prevSong() {
+    if (!currentEmotion) return;
+    
+    if (audioPlayer.currentTime > 3) {
+        audioPlayer.currentTime = 0;
+    } else {
+        const emotion = EMOTIONS[currentEmotion];
+        currentSongIndex = (currentSongIndex - 1 + emotion.songs.length) % emotion.songs.length;
+        loadCurrentSong();
+        updateUI();
+        
+        if (isPlaying) {
+            audioPlayer.play();
+        }
+    }
+}
+
+// Format Time
+function formatTime(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+}
+
+// Volume Control
+function updateVolumeSlider() {
+    const slider = document.getElementById('volumeSlider');
+    const display = document.getElementById('volumeDisplay');
+    
+    slider.addEventListener('input', (e) => {
+        const volume = e.target.value;
+        display.textContent = `${volume}%`;
+        audioPlayer.volume = volume / 100;
+    });
+    
+    // Set initial volume
+    audioPlayer.volume = 0.7;
 }
 
 // Update Control Colors
@@ -265,9 +397,6 @@ function updateControlColors(color) {
         .control-btn:hover { background: rgba(255, 255, 255, 0.3); }
         .play-btn { background: ${color}; }
         .play-btn:hover { background: ${color}; opacity: 0.9; }
-        .volume-slider { background: rgba(255, 255, 255, 0.3); }
-        .volume-slider::-webkit-slider-track { background: rgba(255, 255, 255, 0.3); }
-        .volume-slider::-moz-range-track { background: rgba(255, 255, 255, 0.3); }
         .playlist { background: rgba(255, 255, 255, 0.1); color: white; }
         .playlist-title { color: white; }
         .playlist-item { background: rgba(255, 255, 255, 0.1); color: white; }
@@ -308,118 +437,13 @@ function renderPlaylist() {
         `;
         item.onclick = () => {
             currentSongIndex = index;
-            progress = 0;
+            loadCurrentSong();
             updateUI();
-            if (isPlaying) startProgress();
+            if (isPlaying) {
+                audioPlayer.play();
+            }
         };
         playlistItems.appendChild(item);
-    });
-}
-
-// Toggle Play
-function togglePlay() {
-    if (!currentEmotion) return;
-    
-    isPlaying = !isPlaying;
-    
-    const playIcon = document.getElementById('playIcon');
-    const emojiDisplay = document.getElementById('emojiDisplay');
-    
-    if (isPlaying) {
-        playIcon.innerHTML = '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
-        emojiDisplay.classList.add('playing');
-        startProgress();
-    } else {
-        playIcon.innerHTML = '<polygon points="5 3 19 12 5 21 5 3"/>';
-        emojiDisplay.classList.remove('playing');
-        stopProgress();
-    }
-}
-
-// Start Progress
-function startProgress() {
-    stopProgress();
-    
-    const emotion = EMOTIONS[currentEmotion];
-    const song = emotion.songs[currentSongIndex];
-    
-    progressInterval = setInterval(() => {
-        progress += 0.5;
-        
-        if (progress >= song.duration) {
-            progress = 0;
-            nextSong();
-            showMoodCheckIn();
-        }
-        
-        updateProgressBar();
-    }, 500);
-}
-
-// Stop Progress
-function stopProgress() {
-    if (progressInterval) {
-        clearInterval(progressInterval);
-        progressInterval = null;
-    }
-}
-
-// Update Progress Bar
-function updateProgressBar() {
-    if (!currentEmotion) return;
-    
-    const emotion = EMOTIONS[currentEmotion];
-    const song = emotion.songs[currentSongIndex];
-    const percentage = (progress / song.duration) * 100;
-    
-    document.getElementById('progressFill').style.width = `${percentage}%`;
-    document.getElementById('albumProgressBar').style.width = `${percentage}%`;
-    document.getElementById('currentTime').textContent = formatTime(Math.floor(progress));
-}
-
-// Next Song
-function nextSong() {
-    if (!currentEmotion) return;
-    
-    const emotion = EMOTIONS[currentEmotion];
-    currentSongIndex = (currentSongIndex + 1) % emotion.songs.length;
-    progress = 0;
-    updateUI();
-    
-    if (isPlaying) startProgress();
-}
-
-// Previous Song
-function prevSong() {
-    if (!currentEmotion) return;
-    
-    if (progress > 3) {
-        progress = 0;
-    } else {
-        const emotion = EMOTIONS[currentEmotion];
-        currentSongIndex = (currentSongIndex - 1 + emotion.songs.length) % emotion.songs.length;
-        progress = 0;
-    }
-    
-    updateUI();
-    if (isPlaying) startProgress();
-}
-
-// Format Time
-function formatTime(seconds) {
-    const mins = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-    return `${mins}:${secs.toString().padStart(2, '0')}`;
-}
-
-// Volume Control
-function updateVolumeSlider() {
-    const slider = document.getElementById('volumeSlider');
-    const display = document.getElementById('volumeDisplay');
-    
-    slider.addEventListener('input', (e) => {
-        volume = e.target.value;
-        display.textContent = `${volume}%`;
     });
 }
 
@@ -494,11 +518,4 @@ function updateThemeIcon() {
     } else {
         themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
     }
-}
-
-// Add to the loadFromStorage() function
-const urlParams = new URLSearchParams(window.location.search);
-const moodFromUrl = urlParams.get('mood');
-if (moodFromUrl) {
-    selectEmotion(moodFromUrl);
 }

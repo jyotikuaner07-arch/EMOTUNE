@@ -686,3 +686,19 @@ body.dark-mode {
 .dark-mode .volume-control svg {
     color: white;
 }
+
+/* YouTube Player Container */
+.youtube-player-container {
+    margin: 0 auto 32px;
+    max-width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 16px;
+}
+
+.youtube-player-container iframe {
+    display: block;
+    border-radius: 16px;
+}
